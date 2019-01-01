@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/frithnanth/perl6-File-Metadata-Libextractor.svg?branch=master)](https://travis-ci.org/frithnanth/perl6-File-Metadata-Libextractor)
+
 NAME
 ====
 
