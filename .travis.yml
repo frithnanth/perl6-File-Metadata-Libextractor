@@ -3,6 +3,9 @@ os: linux
 language: perl6
 perl6:
   - '2018.12'
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install libarchive13 libexiv2-12 libgsf-1-114 libmpeg2-4 librpm3 libsmf0
 install:
   - wget http://ubuntu.mirrors.tds.net/ubuntu/pool/universe/libe/libextractor/libextractor3_1.3-1_amd64.deb
   - sudo dpkg -i libextractor3_1.3-1_amd64.deb
