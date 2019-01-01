@@ -4,9 +4,9 @@ language: perl6
 perl6:
   - '2018.12'
 before_install:
-  - sudo add-apt-repository universe
+  - sudo add-apt-repository -y universe
   - sudo apt-get -qq update
-  - sudo apt-get install libextractor3
+  - sudo apt-get install -y libextractor3
 install:
   - rakudobrew build zef
   - zef install --deps-only --/test .
