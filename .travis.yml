@@ -1,12 +1,11 @@
-dist: xenial
+dist: trusty
 os: linux
 language: perl6
 perl6:
   - '2018.12'
-before_install:
-  - wget http://security.ubuntu.com/ubuntu/pool/main/liba/libarchive/libarchive13_3.1.2-11ubuntu0.16.04.4_amd64.deb
-  - sudo dpkg -i libarchive13_3.1.2-11ubuntu0.16.04.4_amd64.deb
 install:
+  - wget http://ubuntu.mirrors.tds.net/ubuntu/pool/universe/libe/libextractor/libextractor3_1.3-1_amd64.deb
+  - sudo dpkg -i libextractor3_1.3-1_amd64.deb
   - rakudobrew build zef
   - zef install --deps-only --/test .
 script:
