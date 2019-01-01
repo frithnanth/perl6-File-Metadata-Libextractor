@@ -1,0 +1,13 @@
+dist: xenial
+os: linux
+language: perl6
+perl6:
+  - '2018.12'
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install libextractor3
+install:
+  - rakudobrew build zef
+  - zef install --deps-only --/test .
+script:
+  - PERL6LIB=$PWD/lib prove -e perl6 -vr t/
