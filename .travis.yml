@@ -4,7 +4,10 @@ language: perl6
 perl6:
   - '2018.12'
 before_install:
+  - sudo cat /etc/apt/sources.list
+  - sudo apt-add-repository -y 'deb http://archive.ubuntu.com/ubuntu/ xenial main restricted'
   - sudo apt-add-repository -y 'deb http://archive.ubuntu.com/ubuntu/ xenial universe'
+  - sudo apt-add-repository -y 'deb http://archive.ubuntu.com/ubuntu/ xenial multiverse'
   - sudo apt-get -qq update
   - sudo apt-get install libextractor3
 install:
