@@ -3,7 +3,7 @@
 NAME
 ====
 
-File::Metadata::Libextractor - Use libextract to read file metadata
+File::Metadata::Libextractor - Use libextractor to read file metadata
 
 SYNOPSIS
 ========

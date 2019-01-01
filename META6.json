@@ -5,7 +5,7 @@
   ],
   "build-depends" : [ ],
   "depends" : [ ],
-  "description" : "Use libextract to read file metadata",
+  "description" : "Use libextractor to read file metadata",
   "license" : "Artistic-2.0",
   "name" : "File::Metadata::Libextractor",
   "perl" : "6.c",
@@ -15,7 +15,7 @@
     "File::Metadata::Libextractor::Raw" : "lib/File/Metadata/Libextractor/Raw.pm6"
   },
   "resources" : [ ],
-  "source-url" : "",
+  "source-url" : "https://github.com/frithnanth/perl6-File-Metadata-Libextractor.git",
   "tags" : [
     "file",
     "metadata",
