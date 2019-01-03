@@ -5,7 +5,7 @@ perl6:
   - '2018.12'
 before_install:
   - sudo cat /etc/apt/sources.list
-  - rm /etc/apt/sources.list
+  - rm -y /etc/apt/sources.list
   - echo deb http://us-central1.gce.archive.ubuntu.com/ubuntu/ xenial main restricted > /etc/apt/sources.list
   - echo deb-src http://us-central1.gce.archive.ubuntu.com/ubuntu/ xenial main restricted >> /etc/apt/sources.list
   - echo deb http://us-central1.gce.archive.ubuntu.com/ubuntu/ xenial-update main restricted >> /etc/apt/sources.list
