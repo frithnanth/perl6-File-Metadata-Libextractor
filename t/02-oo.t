@@ -12,7 +12,7 @@ is @info[0]<plugin-name>, 'mime', 'plugin name';
 is @info[0]<plugin-type>, 'EXTRACTOR_METATYPE_MIMETYPE', 'plugin type';
 is @info[0]<plugin-format>, 'EXTRACTOR_METAFORMAT_UTF8', 'plugin format';
 is @info[0]<mime-type>, 'text/plain', 'mime type';
-is @info[0]<data-type>, 'text/x-perl', 'data type';
+like @info[0]<data-type>, /text/, 'data type';
 lives-ok {my @promises;
           for ^5 { @promises.push: start {$le.extract: $*PROGRAM-NAME } }
           await @promises },
