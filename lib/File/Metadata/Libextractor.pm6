@@ -146,15 +146,17 @@ in the EXTRACTOR_MetaType enum (231 values so far).
 
 =head1 Prerequisites
 
-This module requires the libextractor library to be installed. Please follow the instructions below based on your platform:
+This module requires the libextractor library to be installed. It has been successfully tested on the following Linux distributions:
 
-=head2 Debian or Ubuntu Linux
+=head2 Debian 9, Debian sid, Ubuntu 16.04, Ubuntu 18.04
 
 =begin code
 sudo apt-get install libextractor3
 =end code
 
 The module looks for a library called libextractor.so.3 .
+
+It doesn't work with the version of the library that comes with Ubuntu 14.04.
 
 =head1 Installation
 

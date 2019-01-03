@@ -153,14 +153,16 @@ The possible values for the **plugin-type** field are listed in File::Metadata::
 Prerequisites
 =============
 
-This module requires the libextractor library to be installed. Please follow the instructions below based on your platform:
+This module requires the libextractor library to be installed. It has been successfully tested on the following Linux distributions:
 
-Debian or Ubuntu Linux
-----------------------
+Debian 9, Debian sid, Ubuntu 16.04, Ubuntu 18.04
+------------------------------------------------
 
     sudo apt-get install libextractor3
 
 The module looks for a library called libextractor.so.3 .
+
+It doesn't work with the version of the library that comes with Ubuntu 14.04.
 
 Installation
 ============
