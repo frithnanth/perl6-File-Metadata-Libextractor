@@ -1,6 +1,6 @@
 use v6.c;
 
-unit class File::Metadata::Libextractor:ver<0.0.1>:auth<cpan:FRITH>;
+unit class File::Metadata::Libextractor:ver<0.0.2>:auth<cpan:FRITH>;
 
 use NativeCall;
 use File::Metadata::Libextractor::Raw;
@@ -11,9 +11,11 @@ has $.plugins;
 my %metatypemap = EXTRACTOR_MetaType.enums.antipairs;
 my %formatmap   = EXTRACTOR_MetaFormat.enums.antipairs;
 
-submethod BUILD
+submethod BUILD(Bool :$in-process?)
 {
-  $!plugins = EXTRACTOR_plugin_add_defaults(EXTRACTOR_OPTION_DEFAULT_POLICY);
+  $!plugins = EXTRACTOR_plugin_add_defaults($in-process ??
+                                              EXTRACTOR_OPTION_IN_PROCESS !!
+                                              EXTRACTOR_OPTION_DEFAULT_POLICY);
 }
 
 method extract($file where .IO.f // fail "file '$file' not found" --> List)
@@ -119,9 +121,18 @@ in the following file types:
 
 Also, various additional MIME types are detected.
 
-=head2 new()
+=head2 new(Bool :$in-process?)
 
-Creates a B<File::Metadata::Libextractor> object; it needs no argument.
+Creates a B<File::Metadata::Libextractor> object.
+
+libextractor interfaces to several libraries in order to extract the metadata. To work safely it starts sub-processes
+to perform the actual extraction work.
+
+This might cause problems in a concurrent envirnment with locks.
+A possible solution is to run the extraction process inside the program's own process. It's less secure, but it may
+avoid locking problems.
+
+The optional argument B<$in-process> allows the execution of the extraction job in the parent's process.
 
 =head2 extract($file where .IO.f // fail "file '$file' not found" --> List)
 

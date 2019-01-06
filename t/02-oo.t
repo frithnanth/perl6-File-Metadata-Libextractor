@@ -17,5 +17,14 @@ lives-ok {my @promises;
           for ^5 { @promises.push: start {$le.extract: $*PROGRAM-NAME } }
           await @promises },
          'concurrency';
+subtest {
+  my File::Metadata::Libextractor $leip .= new: :in-process;
+  my @infole = $leip.extract($*PROGRAM-NAME);
+  is @infole[0]<plugin-name>, 'mime', 'plugin name';
+  is @infole[0]<plugin-type>, 'EXTRACTOR_METATYPE_MIMETYPE', 'plugin type';
+  is @infole[0]<plugin-format>, 'EXTRACTOR_METAFORMAT_UTF8', 'plugin format';
+  is @infole[0]<mime-type>, 'text/plain', 'mime type';
+  like @infole[0]<data-type>, /text/, 'data type';
+}, 'use in-process';
 
 done-testing;

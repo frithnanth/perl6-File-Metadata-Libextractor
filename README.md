@@ -118,10 +118,16 @@ As the Libextractor site ([https://www.gnu.org/software/libextractor](https://ww
 
 Also, various additional MIME types are detected.
 
-new()
------
+new(Bool :$in-process?)
+-----------------------
 
-Creates a **File::Metadata::Libextractor** object; it needs no argument.
+Creates a **File::Metadata::Libextractor** object.
+
+libextractor interfaces to several libraries in order to extract the metadata. To work safely it starts sub-processes to perform the actual extraction work.
+
+This might cause problems in a concurrent envirnment with locks. A possible solution is to run the extraction process inside the program's own process. It's less secure, but it may avoid locking problems.
+
+The optional argument **$in-process** allows the execution of the extraction job in the parent's process.
 
 extract($file where .IO.f // fail "file '$file' not found" --> List)
 --------------------------------------------------------------------
