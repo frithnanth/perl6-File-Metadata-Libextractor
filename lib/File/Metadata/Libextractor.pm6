@@ -142,13 +142,17 @@ The possible values for B<plugin-format> are:
 =item EXTRACTOR_METAFORMAT_C_STRING
 
 The possible values for the B<plugin-type> field are listed in File::Metadata::Libextractor::Constants,
-in the EXTRACTOR_MetaType enum (231 values so far).
+in the EXTRACTOR_MetaType enum (231 values as for v3.1.6).
 
 =head1 Prerequisites
 
-This module requires the libextractor library to be installed. It has been successfully tested on the following Linux distributions:
+This module requires the libextractor library to be installed. It has been successfully tested on the
+following Linux distributions:
 
-=head2 Debian 9, Debian sid, Ubuntu 16.04, Ubuntu 18.04
+=item Debian 9
+=item Debian sid
+=item Ubuntu 16.04
+=item Ubuntu 18.04
 
 =begin code
 sudo apt-get install libextractor3
@@ -156,7 +160,8 @@ sudo apt-get install libextractor3
 
 The module looks for a library called libextractor.so.3 .
 
-It doesn't work with the version of the library that comes with Ubuntu 14.04.
+It doesn't work with the version of the library that comes with Ubuntu 14.04, even if it's the same version as
+the Debian 9's.
 
 =head1 Installation
 
