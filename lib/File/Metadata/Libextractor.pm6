@@ -165,14 +165,13 @@ following Linux distributions:
 =item Ubuntu 16.04
 =item Ubuntu 18.04
 
+It doesn't work with the version of the library that comes with Ubuntu 14.04.
+
 =begin code
 sudo apt-get install libextractor3
 =end code
 
-The module looks for a library called libextractor.so.3 .
-
-It doesn't work with the version of the library that comes with Ubuntu 14.04, even if it's the same version as
-the Debian 9's.
+This module looks for a library called libextractor.so.3 .
 
 =head1 Installation
 

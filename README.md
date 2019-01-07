@@ -169,11 +169,11 @@ This module requires the libextractor library to be installed. It has been succe
 
   * Ubuntu 18.04
 
+It doesn't work with the version of the library that comes with Ubuntu 14.04.
+
     sudo apt-get install libextractor3
 
-The module looks for a library called libextractor.so.3 .
-
-It doesn't work with the version of the library that comes with Ubuntu 14.04, even if it's the same version as the Debian 9's.
+This module looks for a library called libextractor.so.3 .
 
 Installation
 ============
