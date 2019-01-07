@@ -17,7 +17,7 @@
   "resources" : [ ],
   "source-url" : "https://github.com/frithnanth/perl6-File-Metadata-Libextractor.git",
   "tags" : [
-    "file",
+    "filesystem",
     "metadata",
     "nativecall"
   ],
