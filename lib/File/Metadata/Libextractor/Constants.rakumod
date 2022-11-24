@@ -1,6 +1,6 @@
 use v6;
 
-unit module File::Metadata::Libextractor::Constants:ver<0.0.1>:auth<cpan:FRITH>;
+unit module File::Metadata::Libextractor::Constants:ver<0.0.1>:auth<zef:FRITH>;
 
 enum EXTRACTOR_Options is export <EXTRACTOR_OPTION_DEFAULT_POLICY EXTRACTOR_OPTION_OUT_OF_PROCESS_NO_RESTART
                                   EXTRACTOR_OPTION_IN_PROCESS  EXTRACTOR_OPTION_DISABLED>;
@@ -248,7 +248,7 @@ enum EXTRACTOR_MetaType is export (
 File::Metadata::Libextractor::Constants - Libextractor-related constants
 
 =head1 SYNOPSIS
-=begin code
+=begin code :lang<raku>
 
 use v6;
 
@@ -284,7 +284,7 @@ $ zef install File::Metadata::Libextractor
 To run the tests:
 
 =begin code
-$ prove -e "perl6 -Ilib"
+$ prove -e "raku -Ilib"
 =end code
 
 =head1 Author

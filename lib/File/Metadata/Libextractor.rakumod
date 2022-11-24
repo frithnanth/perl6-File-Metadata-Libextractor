@@ -1,6 +1,6 @@
 use v6.c;
 
-unit class File::Metadata::Libextractor:ver<0.0.2>:auth<cpan:FRITH>;
+unit class File::Metadata::Libextractor:ver<0.0.2>:auth<zef:FRITH>;
 
 use NativeCall;
 use File::Metadata::Libextractor::Raw;
@@ -51,7 +51,7 @@ File::Metadata::Libextractor - Use libextractor to read file metadata
 
 =head1 SYNOPSIS
 
-=begin code
+=begin code :lang<raku>
 use File::Metadata::Libextractor;
 
 #| This program extracts all the information about a file
@@ -186,7 +186,7 @@ $ zef install File::Metadata::Libextractor
 To run the tests:
 
 =begin code
-$ prove -e "perl6 -Ilib"
+$ prove -e "raku -Ilib"
 =end code
 
 =head1 AUTHOR

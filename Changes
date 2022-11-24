@@ -1,6 +1,8 @@
 Revision history for File-Metadata-Libextractor
 
 {{$NEXT}}
+    - Use zef ecosystem
+    - Use Github CI
 
 0.0.2  2019-01-09T15:50:23+01:00
     - Add a parameter to .new to manage locks

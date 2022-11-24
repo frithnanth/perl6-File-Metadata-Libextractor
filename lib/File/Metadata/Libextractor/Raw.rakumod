@@ -1,6 +1,6 @@
 use v6.c;
 
-unit module File::Metadata::Libextractor::Raw:ver<0.0.1>:auth<cpan:FRITH>;
+unit module File::Metadata::Libextractor::Raw:ver<0.0.1>:auth<zef:FRITH>;
 
 use NativeCall;
 use File::Metadata::Libextractor::Constants;
@@ -28,7 +28,7 @@ sub EXTRACTOR_extract(Pointer $plugins, Str $filename, Pointer $data, size_t $si
 File::Metadata::Libextractor::Raw - A simple interface to libextractor
 
 =head1 SYNOPSIS
-=begin code
+=begin code :lang<raku>
 
 use v6;
 
@@ -88,7 +88,7 @@ $ zef install File::Metadata::Libextractor
 To run the tests:
 
 =begin code
-$ prove -e "perl6 -Ilib"
+$ prove -e "raku -Ilib"
 =end code
 
 =head1 Author

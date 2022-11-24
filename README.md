@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/frithnanth/perl6-File-Metadata-Libextractor.svg?branch=master)](https://travis-ci.org/frithnanth/perl6-File-Metadata-Libextractor)
+[![Actions Status](https://github.com/frithnanth/perl6-File-Metadata-Libextractor/workflows/test/badge.svg)](https://github.com/frithnanth/perl6-File-Metadata-Libextractor/actions)
 
 NAME
 ====
@@ -8,20 +8,22 @@ File::Metadata::Libextractor - Use libextractor to read file metadata
 SYNOPSIS
 ========
 
-    use File::Metadata::Libextractor;
+```raku
+use File::Metadata::Libextractor;
 
-    #| This program extracts all the information about a file
-    sub MAIN($file! where { .IO.f // die "file '$file' not found" })
-    {
-      my File::Metadata::Libextractor $e .= new;
-      my @info = $e.extract($file);
-      for @info -> %record {
-        for %record.kv -> $k, $v {
-          say "$k: $v"
-        }
-        say '-' x 50;
-      }
+#| This program extracts all the information about a file
+sub MAIN($file! where { .IO.f // die "file '$file' not found" })
+{
+  my File::Metadata::Libextractor $e .= new;
+  my @info = $e.extract($file);
+  for @info -> %record {
+    for %record.kv -> $k, $v {
+      say "$k: $v"
     }
+    say '-' x 50;
+  }
+}
+```
 
 DESCRIPTION
 ===========
@@ -187,7 +189,7 @@ Testing
 
 To run the tests:
 
-    $ prove -e "perl6 -Ilib"
+    $ prove -e "raku -Ilib"
 
 AUTHOR
 ======
