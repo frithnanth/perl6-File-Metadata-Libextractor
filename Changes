@@ -1,6 +1,8 @@
 Revision history for File-Metadata-Libextractor
 
 {{$NEXT}}
+
+0.0.3  2022-11-24T11:33:35+01:00
     - Use zef ecosystem
     - Use Github CI
 

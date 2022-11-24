@@ -1,6 +1,6 @@
 use v6.c;
 
-unit module File::Metadata::Libextractor::Raw:ver<0.0.1>:auth<zef:FRITH>;
+unit module File::Metadata::Libextractor::Raw:ver<0.0.3>:auth<zef:FRITH>;
 
 use NativeCall;
 use File::Metadata::Libextractor::Constants;

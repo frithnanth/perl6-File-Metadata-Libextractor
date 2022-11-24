@@ -1,6 +1,6 @@
 use v6;
 
-unit module File::Metadata::Libextractor::Constants:ver<0.0.1>:auth<zef:FRITH>;
+unit module File::Metadata::Libextractor::Constants:ver<0.0.3>:auth<zef:FRITH>;
 
 enum EXTRACTOR_Options is export <EXTRACTOR_OPTION_DEFAULT_POLICY EXTRACTOR_OPTION_OUT_OF_PROCESS_NO_RESTART
                                   EXTRACTOR_OPTION_IN_PROCESS  EXTRACTOR_OPTION_DISABLED>;
